@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <nav>
+  <ul>
+    <img src="" alt="logo">
+    <li><p onclick="showdiv()" class="h1">+ <span>Add work</span></p></li>
+    <li onclick="edit()"><p class="h1">&#9998<span>Edit</span></p></li>
+    <marquee behavior="smmoth" direction="lift">Use the nav-bar to transfer the work from one field to another</marquee>
+    <li><p class="slide1" onclick="addtopending()">Pending</p></li>
+    <li><p class="slide2" onclick="addtowork()">Underwork</p></li>
+    <li><p class="slide3" onclick="completed()">Completed</p></li>
+    <li><p class="slide4" onclick="addtobin()">RcycleBin</p></li>
+    <li><p onclick="Delete()">Delete</p></li>
+  </ul>
+ </nav>
+  <div class="slider-container">
+    <div class="slider-wrapper">
+      <div class="slide" id="slide1" onclick="slide1()">
+        <h1>Pending </h1>
+      </div>
+      <div class="slide" id="slide2" onclick="slide2()">
+        <h1 style="padding-inline: 65vh;">UnderWorking</h1>
+      </div>
+      <div class="slide" id="slide3" onclick="slide3()">
+        <h1>Completed</h1>
+      </div>
+      <div class="slide" id="slide4" onclick="slide4()">
+        <h1>RecycleBin</h1>
+    </div>
+    </div>
+    <button class="prev" onclick="prevSlide()">&#10094;</button>
+    <button class="next" onclick="nextSlide()">&#10095;</button>
+  </div>
+<div class="addetor" id="addetor" style="display: none;">
+  <h1>Work to be added</h1>
+  <div>
+    <h2 style="margin-top: -80px;">Tittle</h2>
+  <input type="text" id="title" maxlength="20">
+  </div>
+  <div>
+    <h2 style="margin-top: 20px;">Detailes</h2>
+  <textarea name="text" id="work"></textarea>
+  </div>
+  <button onclick="addwork()">Add Work</button>
+</div>
+</body>
+<script src="script.js"></script>
+</html>
